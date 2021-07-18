@@ -1,13 +1,20 @@
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import React from 'react'
-import './App.css'
+import Homepage from './screens/Homepage'
+import Product from './screens/Product'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>ReviewBot</h1>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Homepage/>
+        </Route>
+        <Route path="/product/:productId">
+          <Product/>
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
