@@ -1,21 +1,28 @@
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
-import React from 'react'
-import Homepage from './screens/Homepage'
-import Product from './screens/Product'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import * as React from 'react';
+import Homepage from './screens/Homepage';
+import ProductPage from './screens/ProductPage';
+import Header from './components/Header';
+import { Box } from '@chakra-ui/react';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Homepage/>
-        </Route>
-        <Route path="/product/:productId">
-          <Product/>
-        </Route>
-      </Switch>
-    </Router>
-  )
+    <div>
+      <Header />
+      <Box pt="4">
+        <Router>
+          <Switch>
+            <Route path="/product/:productId">
+              <ProductPage />
+            </Route>
+            <Route path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </Router>
+      </Box>
+    </div>
+  );
 }
 
-export default App
+export default App;
