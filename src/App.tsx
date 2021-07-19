@@ -3,14 +3,14 @@ import * as React from 'react';
 import Homepage from './screens/Homepage';
 import ProductPage from './screens/ProductPage';
 import Header from './components/Header';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 function App(): JSX.Element {
   return (
-    <div>
-      <Header />
-      <Box pt="4">
-        <Router>
+    <Router>
+      <Flex direction="column" minHeight="100vh">
+        <Header />
+        <Box flex="1" bg="blue.50" pt="4">
           <Switch>
             <Route path="/product/:productId">
               <ProductPage />
@@ -19,9 +19,9 @@ function App(): JSX.Element {
               <Homepage />
             </Route>
           </Switch>
-        </Router>
-      </Box>
-    </div>
+        </Box>
+      </Flex>
+    </Router>
   );
 }
 

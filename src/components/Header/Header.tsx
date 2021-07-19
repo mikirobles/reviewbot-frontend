@@ -1,12 +1,14 @@
-import { Center, Text } from '@chakra-ui/react';
+import { Center, Image } from '@chakra-ui/react';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+import logo from './logo.svg';
 
 function Header(): JSX.Element {
   return (
-    <Center bg="red.100" w="100%" p="4" boxShadow="base">
-      <Text fontWeight="bold" fontStyle="italic">
-        ReviewBot
-      </Text>
+    <Center bg="white" w="100%" p="4" borderBottom="1px" borderColor="blue.100">
+      <Link to="/">
+        <Image src={logo} />
+      </Link>
     </Center>
   );
 }
