@@ -4,7 +4,7 @@ export interface Review {
   id: number;
   productId: Product['id'];
   rating: number;
-  date: string;
+  date: number;
   description: string;
   user: {
     id: number;

@@ -12,7 +12,7 @@ const stars: Record<number, string> = {
 
 function ReviewDetail(props: Review): JSX.Element {
   return (
-    <Box width="100%" bg="white" borderRadius="4" boxShadow="base">
+    <Box width="100%" bg="white" borderRadius="4" boxShadow="base" mb="4">
       <Flex
         alignItems="center"
         width="100%"
@@ -33,7 +33,13 @@ function ReviewDetail(props: Review): JSX.Element {
             alt={props.user.name}
           />
           <Text>{props.user.name}</Text>
-          <Text title={props.date} ml="1" fontStyle="italic" color="blackAlpha.600" fontSize="smaller">
+          <Text
+            title={new Date(props.date).toString()}
+            ml="1"
+            fontStyle="italic"
+            color="blackAlpha.600"
+            fontSize="smaller"
+          >
             (2 days ago)
           </Text>
         </Flex>
