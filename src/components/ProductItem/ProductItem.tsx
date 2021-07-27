@@ -19,6 +19,7 @@ function ProductItem(props: ProductProps): JSX.Element {
         boxShadow="base"
         transition=".25s"
         _hover={{ boxShadow: 'lg' }}
+        data-test-id="product-item"
       >
         <Box height="150px">
           <AspectRatio w="150px" ratio={1}>

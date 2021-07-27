@@ -12,7 +12,7 @@ const stars: Record<number, string> = {
 
 function ReviewDetail(props: Review): JSX.Element {
   return (
-    <Box width="100%" bg="white" borderRadius="4" boxShadow="base" mb="4">
+    <Box width="100%" bg="white" borderRadius="4" boxShadow="base" mb="4" data-test-id={`product-review-${props.id}`}>
       <Flex
         alignItems="center"
         width="100%"

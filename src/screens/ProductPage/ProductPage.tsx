@@ -37,8 +37,7 @@ function ProductPage(): JSX.Element {
 
   return (
     <Container>
-      {/* Product Detail */}
-      <Flex alignItems="center" mb="8">
+      <Flex alignItems="center" mb="8" data-test-id="product-page-header">
         <AspectRatio mr="2" ratio={1} width="100px">
           <Image borderRadius="full" src={product.image} border="1px" borderColor="blue.100" alt={product.name} />
         </AspectRatio>
@@ -46,7 +45,6 @@ function ProductPage(): JSX.Element {
           {product.name}
         </Text>
       </Flex>
-      {/* Reviews */}
       {reviews.map((review) => (
         <ReviewDetail {...review} key={review.id} />
       ))}
