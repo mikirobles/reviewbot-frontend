@@ -27,7 +27,7 @@ function ProductItem(props: ProductProps): JSX.Element {
           </AspectRatio>
         </Box>
         <Box roundedRight="base" position="relative" p="2" pr="4" pl="4">
-          <Text color="blue.900" fontWeight="semibold" noOfLines={2} fontSize="md" mb="1">
+          <Text title={props.name} color="blue.900" fontWeight="semibold" noOfLines={2} fontSize="md" mb="1">
             {props.name}
           </Text>
           <Badge colorScheme="orange">{props.reviewCount} reviews</Badge>

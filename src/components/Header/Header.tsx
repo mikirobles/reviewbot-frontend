@@ -7,7 +7,7 @@ function Header(): JSX.Element {
   return (
     <Center bg="white" w="100%" p="4" borderBottom="1px" borderColor="blue.100">
       <Link to="/">
-        <Image src={logo} />
+        <Image alt="ReviewBot" src={logo} />
       </Link>
     </Center>
   );
