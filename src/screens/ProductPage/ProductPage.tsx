@@ -45,6 +45,11 @@ function ProductPage(): JSX.Element {
           {product.name}
         </Text>
       </Flex>
+      {reviews.length === 0 && (
+        <Box bg="white" p="4" borderRadius="4" border="1px" borderColor="blue.100">
+          <Text textAlign="center">There are no reviews for this product.</Text>
+        </Box>
+      )}
       {reviews.map((review) => (
         <ReviewDetail {...review} key={review.id} />
       ))}

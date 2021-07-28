@@ -19,9 +19,9 @@ const mockReviews: Review[] = [
     productId: 1,
     rating: 3,
     date: 1626808904187,
-    description: 'I love this product!',
+    description: 'I had some issues with this product. Do not recommend!',
     user: {
-      name: 'Jennifer Aniston',
+      name: 'Tim Eric',
       id: 1,
       image:
         'https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/1613703095215-TEZ2DFQ71FLPA5KAL6D1/Headshots-photographer-vancouver-1.jpg?format=2500w',
@@ -34,10 +34,9 @@ const mockReviews: Review[] = [
     date: 1626808904187,
     description: 'I love this product!',
     user: {
-      name: 'Jennifer Aniston',
+      name: 'Jonah Hill',
       id: 1,
-      image:
-        'https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/1613703095215-TEZ2DFQ71FLPA5KAL6D1/Headshots-photographer-vancouver-1.jpg?format=2500w',
+      image: ""
     },
   },
   {
