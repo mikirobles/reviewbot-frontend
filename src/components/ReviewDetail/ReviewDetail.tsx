@@ -1,6 +1,7 @@
 import { Badge, Box, Flex, Image, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Review } from '../../types/Review';
+import { formatDistance, subDays } from 'date-fns';
 
 const stars: Record<number, string> = {
   1: '★',
@@ -40,7 +41,7 @@ function ReviewDetail(props: Review): JSX.Element {
             color="blackAlpha.600"
             fontSize="smaller"
           >
-            (2 days ago)
+            ({formatDistance(subDays(props.date, 3), new Date(), { addSuffix: true })})
           </Text>
         </Flex>
         <Badge>
