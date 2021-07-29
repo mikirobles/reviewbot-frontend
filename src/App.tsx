@@ -4,6 +4,7 @@ import Homepage from './screens/Homepage';
 import ProductPage from './screens/ProductPage';
 import Header from './components/Header';
 import { Box, Flex } from '@chakra-ui/react';
+import AdminPage from './screens/AdminPage';
 
 function App(): JSX.Element {
   return (
@@ -12,6 +13,9 @@ function App(): JSX.Element {
         <Header />
         <Box flex="1" bg="blue.50" pt="4">
           <Switch>
+            <Route path="/admin">
+              <AdminPage />
+            </Route>
             <Route path="/product/:productId">
               <ProductPage />
             </Route>

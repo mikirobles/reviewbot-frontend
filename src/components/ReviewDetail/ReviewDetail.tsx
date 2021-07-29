@@ -2,6 +2,7 @@ import { Badge, Box, Flex, Image, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Review } from '../../types/Review';
 import { formatDistance, subDays } from 'date-fns';
+import HighlightText from '../HighlightText';
 
 const stars: Record<number, string> = {
   1: '★',
@@ -11,7 +12,11 @@ const stars: Record<number, string> = {
   5: '★★★★★',
 };
 
-function ReviewDetail(props: Review): JSX.Element {
+type ReviewDetailProps = Review & {
+  highlight?: string;
+};
+
+function ReviewDetail(props: ReviewDetailProps): JSX.Element {
   return (
     <Box width="100%" bg="white" borderRadius="4" boxShadow="base" mb="4" data-test-id={`product-review-${props.id}`}>
       <Flex
@@ -34,7 +39,7 @@ function ReviewDetail(props: Review): JSX.Element {
             src={props.user.image}
             alt={props.user.name}
           />
-          <Text>{props.user.name}</Text>
+          <HighlightText highlight={props.highlight} text={props.user.name} />
           <Text
             title={new Date(props.date).toString()}
             ml="1"
@@ -50,7 +55,7 @@ function ReviewDetail(props: Review): JSX.Element {
         </Badge>
       </Flex>
       <Box p="4" pt="2">
-        <Text>{props.description}</Text>
+        <HighlightText highlight={props.highlight} text={props.description} />
       </Box>
     </Box>
   );
